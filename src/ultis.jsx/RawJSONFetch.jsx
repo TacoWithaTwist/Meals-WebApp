@@ -1,6 +1,6 @@
-export async function RawJSONFetch(header) {
+export async function RawJSONFetch(url) {
   try {
-    const response = await fetch(header.url, header.options);
+    const response = await fetch(url);
     const result = await response.json();
     console.log(result);
     return result;

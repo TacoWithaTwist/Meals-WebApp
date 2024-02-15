@@ -1,0 +1,42 @@
+.NavBar {
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+  gap: 60%;
+  height: 8vh;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+}
+.leftSide {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.leftSide > .NavLink {
+  color: black;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+.Search {
+  color: black;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+.rightSide {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.NavLink {
+  text-decoration: none;
+}
+.Logo {
+  width: 3vw;
+  height: auto;
+}
+.ProfileIcon {
+  width: 3vw;
+  height: auto;
+  border: solid 1px black;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}

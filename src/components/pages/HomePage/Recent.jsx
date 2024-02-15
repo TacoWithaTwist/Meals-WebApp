@@ -1,3 +1,3 @@
 export default function Recent() {
-  return <></>;
+  return <div className="Recent"></div>;
 }
