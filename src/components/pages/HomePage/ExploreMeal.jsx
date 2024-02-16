@@ -1,16 +1,26 @@
 import PropTypes from 'prop-types';
+import '../../../cssModules/ExploreMeal.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 export default function ExploreMeal({ meal }) {
+  const [isClicked, setIsClicked] = useState(false);
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
   return (
-    <div className="ExploreMeal">
-      <img src={meal.strSource} alt="#" className="ExploreMealImage" />
-      <h4 className="ExploreMealTitle">{meal.strMeal}</h4>
-    </div>
+    <Link
+      to="/MealDetails"
+      className={isClicked ? 'pressed ExploreMeal' : 'ExploreMeal'}
+      onClick={handleClick}
+    >
+      <img src={meal.img} alt="#" className="ExploreMealImage" />
+      <h4 className="ExploreMealTitle">{meal.name}</h4>
+    </Link>
   );
 }
 ExploreMeal.propTypes = {
-  key: PropTypes.number.isRequired,
   meal: PropTypes.shape({
-    strMeal: PropTypes.string.isRequired,
-    strSource: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
   }).isRequired,
 };

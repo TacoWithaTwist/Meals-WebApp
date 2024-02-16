@@ -1,0 +1,11 @@
+.Explore {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ExploreMealsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5em;
+}

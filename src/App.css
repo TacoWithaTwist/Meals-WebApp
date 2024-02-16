@@ -42,25 +42,11 @@
 .App {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.page-enter {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-.page-enter-active {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: opacity 500ms, transform 500ms;
-}
-
-.page-exit {
-  opacity: 1;
-  transform: translateX(0%);
-}
-
-.page-exit-active {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 500ms, transform 500ms;
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

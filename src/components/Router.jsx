@@ -4,6 +4,7 @@ import ErrorPage from './ErrorPage';
 import Home from './pages/HomePage/Home';
 import MealSearch from './pages/MealSearchPage/MealSearch';
 import Profile from './pages/ProfilePage/Profile';
+import MealDetails from './MealDetails';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const Router = () => {
         {
           path: '/Profile',
           element: <Profile />,
+        },
+        {
+          path: '/MealDetails',
+          element: <MealDetails />,
         },
         {
           path: '*',

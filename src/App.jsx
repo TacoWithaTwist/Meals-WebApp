@@ -1,22 +1,21 @@
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import './App.css';
 import NavBar from './components/NavBar.jsx';
-import { APIContext } from './components/context/APIContext.jsx';
+// import { APIContext } from './components/context/APIContext.jsx';
 import { Outlet } from 'react-router-dom';
-import raw from './assets/raw.txt';
+// import raw from './assets/raw.txt';
+// import { useAPIFetching } from './utils/useAPIFetching.jsx';
 
 function App() {
+  // const object = useAPIFetching(raw);
   return (
-    <APIContext.Provider value={raw}>
-      <div className="App">
-        <NavBar />
-        <TransitionGroup>
-          <CSSTransition classNames="page" timeout={500}>
-            <Outlet />
-          </CSSTransition>
-        </TransitionGroup>
+    // <APIContext.Provider value={object}>
+    <div className="App">
+      <NavBar />
+      <div className="pageContainer">
+        <Outlet />
       </div>
-    </APIContext.Provider>
+    </div>
+    // </APIContext.Provider>
   );
 }
 

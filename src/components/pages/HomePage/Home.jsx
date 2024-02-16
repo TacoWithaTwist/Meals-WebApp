@@ -1,6 +1,6 @@
 import Hero from './Hero';
 import Explore from './Explore';
-import Recent from './Recent';
+// import Recent from './Recent';
 import '../../../cssModules/Home.css';
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       {' '}
       <Hero />
       <Explore />
-      <Recent />
+      {/* <Recent /> */}
     </div>
   );
 }
