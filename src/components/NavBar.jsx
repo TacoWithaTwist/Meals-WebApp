@@ -6,7 +6,7 @@ export default function NavBar() {
     <div className="NavBar">
       <div className="leftSide">
         <img src="/logo.svg" alt="" className="Logo" />
-        <NavLink className="NavLink" activeClassName="active" to="/Home">
+        <NavLink className="NavLink" activeclassname="active" to="/Home">
           HealthyBites
         </NavLink>
       </div>
@@ -14,14 +14,14 @@ export default function NavBar() {
       <div className="rightSide">
         <NavLink
           className="NavLink Search"
-          activeClassName="active"
+          activeclassname="active"
           to="/MealSearch"
         >
           Search now!
         </NavLink>
         <NavLink
           className="NavLink Profile"
-          activeClassName="active"
+          activeclassname="active"
           to="/Profile"
         >
           <img src="/profileIcon.svg" alt="" className="ProfileIcon" />

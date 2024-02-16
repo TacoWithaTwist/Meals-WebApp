@@ -3,11 +3,11 @@ import './App.css';
 import NavBar from './components/NavBar.jsx';
 import { APIContext } from './components/context/APIContext.jsx';
 import { Outlet } from 'react-router-dom';
+import raw from './assets/raw.txt';
 
 function App() {
-  const url = 'https://food-recipes-with-images.p.rapidapi.com/';
   return (
-    <APIContext.Provider value={url}>
+    <APIContext.Provider value={raw}>
       <div className="App">
         <NavBar />
         <TransitionGroup>
