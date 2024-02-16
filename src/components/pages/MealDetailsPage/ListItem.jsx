@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import { Checkbox } from "@mui/material";
+import PropTypes from 'prop-types';
+import { Checkbox } from '@mui/material';
 export default function ListItem({ item }) {
   return (
     <div className="ListItem">
-      <Checkbox></Checkbox>
+      <Checkbox style={{ color: 'red' }}>yes</Checkbox>
       <span>{item}</span>
     </div>
   );

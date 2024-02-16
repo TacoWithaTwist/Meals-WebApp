@@ -1,0 +1,22 @@
+.Nutrition {
+  width: 100%;
+}
+
+.Nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Nutrition th,
+.Nutrition td {
+  padding: 8px;
+  text-align: left;
+}
+
+.Nutrition tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row background color */
+}
+
+.Nutrition tbody tr td {
+  border-bottom: 1px solid #ddd; /* Line between rows */
+}

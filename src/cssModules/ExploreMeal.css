@@ -4,8 +4,15 @@
   background-color: white;
   transition: all 0.3s ease;
   cursor: pointer;
-
+  color: black;
+  text-decoration: none;
   border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 3%;
+}
+.ExploreMeal:hover {
+  transform: scale(1.15);
 }
 .pressed {
   transform: scale(1.5);
