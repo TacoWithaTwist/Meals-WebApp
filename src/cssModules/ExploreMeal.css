@@ -4,9 +4,12 @@
   background-color: white;
   transition: all 0.3s ease;
   cursor: pointer;
+
+  border-radius: 25px;
 }
 .pressed {
   transform: scale(1.5);
+  border: #e5c211 solid 3px;
   z-index: 1001;
 }
 .ExploreMeal.pressed .blur-overlay {

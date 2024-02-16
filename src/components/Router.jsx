@@ -1,36 +1,43 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from '../App';
-import ErrorPage from './ErrorPage';
-import Home from './pages/HomePage/Home';
-import MealSearch from './pages/MealSearchPage/MealSearch';
-import Profile from './pages/ProfilePage/Profile';
-import MealDetails from './MealDetails';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "../App";
+import ErrorPage from "./ErrorPage";
+import Home from "./pages/HomePage/Home";
+import MealSearch from "./pages/MealSearchPage/MealSearch";
+import Profile from "./pages/ProfilePage/Profile";
+import MealDetails from "./pages/MealDetailsPage/MealDetails";
 
 const Router = () => {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <App />,
       errorElement: <ErrorPage />,
       children: [
         {
-          path: '/Home',
+          path: "/Home",
           element: <Home />,
         },
         {
-          path: '/MealSearch',
+          path: "/MealDetails",
+          element: <MealDetails />,
+          children: [
+            {
+              path: "/MealDetails/:mealId",
+              element: <MealDetails />,
+            },
+          ],
+        },
+        {
+          path: "/MealSearch",
           element: <MealSearch />,
         },
         {
-          path: '/Profile',
+          path: "/Profile",
           element: <Profile />,
         },
+
         {
-          path: '/MealDetails',
-          element: <MealDetails />,
-        },
-        {
-          path: '*',
+          path: "*",
           element: <ErrorPage />,
         },
       ],
