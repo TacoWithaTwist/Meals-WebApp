@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar.jsx';
 import { APIContext } from './components/context/APIContext.jsx';
+import { Theme } from './components/context/Theme.jsx';
 import { Outlet } from 'react-router-dom';
 // import raw from './assets/raw.txt';
 // import { useAPIFetching } from './utils/useAPIFetching.jsx';
@@ -180,15 +181,17 @@ function App() {
       },
     },
   ];
-
+  const [primary, secondary, accent] = ['#FCFAF8', '#27251D', '#ec6313'];
   return (
     <APIContext.Provider value={list}>
-      <div className="App">
-        <NavBar />
-        <div className="pageContainer">
-          <Outlet />
-        </div>
-      </div>{' '}
+      <Theme.Provider value={[primary, secondary, accent]}>
+        <div className="App">
+          <NavBar />
+          <div className="pageContainer">
+            <Outlet />
+          </div>
+        </div>{' '}
+      </Theme.Provider>
     </APIContext.Provider>
   );
 }

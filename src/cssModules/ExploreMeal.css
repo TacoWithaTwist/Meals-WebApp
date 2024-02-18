@@ -1,7 +1,8 @@
 .ExploreMeal {
-  width: 200px;
-  height: 150px;
-  background-color: white;
+  width: 29vw;
+  height: 29vh;
+  display: flex;
+  gap: 3em;
   transition: all 0.3s ease;
   cursor: pointer;
   color: black;
@@ -10,14 +11,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 3%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ExploreMeal:hover {
-  transform: scale(1.15);
-}
-.pressed {
-  transform: scale(1.5);
-  border: #e5c211 solid 3px;
-  z-index: 1001;
+  transform: scale(1.05);
 }
 .ExploreMeal.pressed .blur-overlay {
   display: block;
@@ -29,5 +27,13 @@
   border-radius: 25px;
 }
 .ExploreMealTitle {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.4em;
+  margin: 0;
+}
+.ExploreMealDesc {
+  font-size: 1.2em;
+}
+.CardMealDesc {
+  height: 100%;
 }
